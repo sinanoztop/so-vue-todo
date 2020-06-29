@@ -53,6 +53,7 @@ export default {
     SELECT_CATEGORY(string) {
       this.selectedCategory = string;
       this.TOGGLE_DROPDOWN();
+      console.log("Test");
     },
     NEW_TODO(event) {
       if (this.selectedCategory == "Todo Category") {
