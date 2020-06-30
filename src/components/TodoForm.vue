@@ -5,7 +5,7 @@
         <div class="input">
           <input
             ref="todoTitle"
-            v-on:keyup.enter="NEW_TODO( $event )"
+            v-on:keyup.enter="NEW_TODO($event)"
             type="text"
             placeholder="Write something and press enter to add list..."
           />
@@ -13,14 +13,17 @@
         <div class="category">
           <span class="selected" v-on:click="TOGGLE_DROPDOWN">
             {{ selectedCategory }}
-            <em v-if="dropdownVisiblity == false" class="fas fa-angle-down"></em>
+            <em
+              v-if="dropdownVisiblity == false"
+              class="fas fa-angle-down"
+            ></em>
             <em v-if="dropdownVisiblity == true" class="fas fa-angle-up"></em>
           </span>
           <span v-if="dropdownVisiblity" class="dropdown">
             <span
-              v-for="( value, key ) in categories"
+              v-for="(value, key) in categories"
               v-bind:key="key"
-              v-on:click="SELECT_CATEGORY( value )"
+              v-on:click="SELECT_CATEGORY(value)"
             >
               {{ value }}
               <em class="fas fa-arrow-right"></em>

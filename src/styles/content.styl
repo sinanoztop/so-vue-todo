@@ -82,3 +82,24 @@
             color #fff
             font-size 10px
             cursor pointer
+
+
+.todolist-categories
+    app_flex()
+    margin-top 32px
+
+    span
+        background #fff
+        padding 10px
+        margin-left 10px
+        border solid 1px $border_color
+        font-size 13px
+        border-radius(4px)
+        cursor pointer
+
+        &.active
+            background $bg_color
+            font-weight 600
+
+        &:first-child
+            margin-left 0

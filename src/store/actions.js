@@ -8,5 +8,5 @@ const DELETE_ITEM = ({ commit }, payload) => {
 
 export default {
   ADD_ITEM,
-  DELETE_ITEM,
+  DELETE_ITEM
 };

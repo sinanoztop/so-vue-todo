@@ -7,9 +7,9 @@ module.exports = {
         use: [require("nib")()],
         import: [
           path.resolve(__dirname, "./src/styles/base.styl"),
-          "~nib/lib/nib/index.styl",
-        ],
-      },
-    },
-  },
+          "~nib/lib/nib/index.styl"
+        ]
+      }
+    }
+  }
 };
