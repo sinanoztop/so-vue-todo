@@ -5,18 +5,18 @@
         <div class="input">
           <input
             ref="todoTitle"
-            v-on:keyup.enter="NEW_TODO($event)"
+            v-on:keyup.enter="NEW_TODO"
             type="text"
-            placeholder="Write something and press enter to add list..."
+            placeholder="Write something and press enter or click plus button..."
           />
+          <span v-on:click="NEW_TODO" class="add_todo_button">
+            <em class="fas fa-plus"></em>
+          </span>
         </div>
         <div class="category">
           <span class="selected" v-on:click="TOGGLE_DROPDOWN">
             {{ selectedCategory }}
-            <em
-              v-if="dropdownVisiblity == false"
-              class="fas fa-angle-down"
-            ></em>
+            <em v-if="dropdownVisiblity == false" class="fas fa-angle-down"></em>
             <em v-if="dropdownVisiblity == true" class="fas fa-angle-up"></em>
           </span>
           <span v-if="dropdownVisiblity" class="dropdown">
@@ -57,12 +57,12 @@ export default {
       this.selectedCategory = string;
       this.TOGGLE_DROPDOWN();
     },
-    NEW_TODO(event) {
+    NEW_TODO() {
       if (this.selectedCategory == "Todo Category") {
         alert("Please select todo category.");
       } else {
         let _insert_data = {
-          title: event.target.value,
+          title: this.$refs.todoTitle.value,
           id: Math.floor(Math.random() * 999),
           category: this.selectedCategory
         };
