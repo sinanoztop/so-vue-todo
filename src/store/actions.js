@@ -13,5 +13,5 @@ const UPDATE_ITEM = ({ commit }, payload) => {
 export default {
   ADD_ITEM,
   DELETE_ITEM,
-  UPDATE_ITEM,
+  UPDATE_ITEM
 };

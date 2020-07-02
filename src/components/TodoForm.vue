@@ -16,7 +16,10 @@
         <div class="category">
           <span class="selected" v-on:click="TOGGLE_DROPDOWN">
             {{ selectedCategory }}
-            <em v-if="dropdownVisiblity == false" class="fas fa-angle-down"></em>
+            <em
+              v-if="dropdownVisiblity == false"
+              class="fas fa-angle-down"
+            ></em>
             <em v-if="dropdownVisiblity == true" class="fas fa-angle-up"></em>
           </span>
           <span v-if="dropdownVisiblity" class="dropdown">

@@ -6,13 +6,14 @@
         {{ item.category }}
         <em v-on:click="toggleSelect" class="edit fas fa-edit"></em>
       </span>
-      <select v-if="show" v-on:change="update_item( item.id, $event )">
+      <select v-if="show" v-on:change="update_item(item.id, $event)">
         <option
           v-for="(value, key) in categories"
           v-bind:key="key"
           v-bind:selected="item.category == value"
           v-bind:value="value"
-        >{{ value }}</option>
+          >{{ value }}</option
+        >
       </select>
     </span>
     <span v-on:click="delete_todo(item.id)" class="remove">

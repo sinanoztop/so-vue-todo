@@ -5,17 +5,19 @@
       <span
         v-bind:class="{ active: activeCategory == 'ALL' }"
         v-on:click="changeCategory('ALL')"
-      >ALL</span>
+        >ALL</span
+      >
       <span
         v-for="(value, key) in categories"
         v-bind:key="key"
         v-bind:class="{ active: activeCategory == value }"
         v-on:click="changeCategory(value)"
-      >{{ value }}</span>
+        >{{ value }}</span
+      >
     </div>
     <div v-if="items.length > 0" class="todolist">
       <TodoItem
-        v-for="( value, key ) in filterItems"
+        v-for="(value, key) in filterItems"
         v-bind:key="key"
         v-bind:item="value"
         v-bind:categories="categories"
@@ -23,7 +25,9 @@
         v-bind:delete_todo="DELETE_TODO"
       />
     </div>
-    <div v-if="items.length == 0" class="empty">You have not added any data yet.</div>
+    <div v-if="items.length == 0" class="empty">
+      You have not added any data yet.
+    </div>
   </div>
 </template>
 
